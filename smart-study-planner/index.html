@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>📘 Smart Study Planner</h1>
+    <p id="quote"></p> <!-- Motivational Quote -->
+    <button id="dark-mode-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <button onclick="showSection('dashboard')">📋 Dashboard</button>
+    <button onclick="showSection('timeline')">📅 Timeline</button>
+    <button onclick="showSection('features')">✨ Features</button>
+    <button onclick="showSection('tips')">💡 Study Tips</button>
+    <button onclick="showSection('about')">ℹ️ About</button>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Dashboard -->
+    <section id="dashboard" class="active">
+      <h2>Study Goals & Tasks</h2>
+      <form id="task-form">
+        <input type="text" id="task-title" placeholder="Enter study task..." required>
+        <input type="date" id="task-date" required>
+        <select id="task-category" required>
+          <option value="">Choose Subject</option>
+          <option value="Math">Math</option>
+          <option value="Science">Science</option>
+          <option value="English">English</option>
+          <option value="History">History</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+
+      <!-- Progress Bar -->
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <p id="progress-text"></p>
+
+      <h3>Your Tasks</h3>
+      <ul id="task-list"></ul>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+      <h2>Study Timeline</h2>
+      <p>Visualize your upcoming deadlines and completed goals.</p>
+      <div id="timeline-container"></div>
+    </section>
+
+    <!-- Features -->
+    <section id="features">
+      <h2>Key Features</h2>
+      <div class="card-container">
+        <div class="card">📋 Task Management<br><small>Add, edit, and track tasks easily.</small></div>
+        <div class="card">⏰ Reminders<br><small>Stay on top of deadlines.</small></div>
+        <div class="card">📅 Timeline View<br><small>See your study plan visually.</small></div>
+        <div class="card">💾 Local Storage<br><small>Your data is safe on your device.</small></div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section id="tips">
+      <h2>Study Tips</h2>
+      <ul class="tips-list">
+        <li>✅ Break study sessions into 25–30 min chunks (Pomodoro Technique).</li>
+        <li>📌 Set realistic daily goals instead of overloading yourself.</li>
+        <li>🕒 Review your timeline every morning to stay on track.</li>
+        <li>💡 Mix difficult and easy tasks to keep yourself motivated.</li>
+        <li>😴 Take short breaks and sleep well to improve memory.</li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About This Project</h2>
+      <p>
+        The <strong>Smart Study Planner</strong> was developed as an internship project to help students 
+        manage their study schedules more effectively.  
+        It allows you to create, view, and manage study tasks with deadlines, categorize them by subject, 
+        visualize timelines, and stay motivated with built-in study tips and quotes.
+      </p>
+      <p>
+        Technologies used: <strong>HTML, CSS, JavaScript</strong> with <strong>Local Storage</strong> for data persistence.  
+         everything stays safe in your browser.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>📘 Smart Study Planner | Made with ❤️ for Productivity | Internship Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
